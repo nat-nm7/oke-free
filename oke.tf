@@ -20,7 +20,7 @@ resource "oci_containerengine_cluster" "oke_cluster" {
   }
   compartment_id = var.compartment_id
   endpoint_config {
-    is_public_ip_enabled = false
+    is_public_ip_enabled = true
     subnet_id            = oci_core_subnet.kubernetes_api_endpoint_subnet.id
   }
   freeform_tags = {
